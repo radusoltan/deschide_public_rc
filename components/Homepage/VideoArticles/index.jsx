@@ -15,7 +15,7 @@ export const VideoArticles = () => {
     <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
       <div className="w-full pb-10">
         <h2 className="text-2xl font-bold font-title">
-          <span className="bg-red-600 p-3 rounded text-white">VIDEO</span>
+          <span className="bg-red-600 p-3 rounded text-white">DIALOG DESCHIS</span>
         </h2>
       </div>
       <div className="flex flex-wrap md:flex-nowrap mx-auto">

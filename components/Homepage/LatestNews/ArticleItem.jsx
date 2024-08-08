@@ -18,7 +18,7 @@ export const ArticleItem = ({article}) => {
 
   const date = moment(published_at).format("LLL")
 
-  return <div className=" flex-shrink max-w-full w-full md:w-1/2 lg:w-full xl:w-full px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+  return <div className="my-2 flex-shrink max-w-full w-full md:w-1/2 lg:w-full xl:w-full px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
     {
       images?.length > 0 ? <div className="flex flex-row shadow-md border-gray-500">
         <div className="w-1/2 mr-3"><ArticleImage title={title} image={thumbnail}/></div>

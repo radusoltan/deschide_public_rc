@@ -7,12 +7,14 @@ import Link from "next/link";
 import {useParams, useRouter} from "next/navigation";
 import useWindowSize from "@/utils";
 import Image from "next/image";
+import {useTranslation} from "react-i18next";
 
 export const AllArticles = ({articles, totalPages, page})=> {
 
   const router = useRouter();
   const {locale} = useParams()
   const { width } = useWindowSize();
+  const {t} = useTranslation()
 
   const handlePageChange = (event) => {
     const page = event.selected + 1
@@ -23,7 +25,7 @@ export const AllArticles = ({articles, totalPages, page})=> {
   return <div className="flex-shrink max-w-full w-full overflow-hidden">
     <div className="w-full py-3">
       <h2 className="text-gray-800 text-2xl font-bold font-title">
-        <span className="inline-block h-5 border-l-4 border-red-600 mr-2"></span>News
+        <span className="inline-block h-5 border-l-4 border-red-600 mr-2"></span>{t('lastNews')}
       </h2>
     </div>
     <div className="flex flex-row flex-wrap -mx-3">

@@ -16,7 +16,8 @@ export const useCategories = ({locale, category}) => {
 }
 
 export const useHomePageCategoryArticles = ({locale, category}) => {
-  const {data: categoryArticles} = useSWR('/api/categoryArticles',async ()=>{
+
+  const {data: categoryArticles} = useSWR(`/api/categoryArticles/${category}`,async ()=>{
     const response = await fetch(`/${locale}/articles/${category}/api/homePageArticles`)
     return response.json()
   })
