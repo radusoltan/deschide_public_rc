@@ -12,6 +12,8 @@ export const HomePageCategory = ({category}) => {
 
   const {categoryArticles} = useHomePageCategoryArticles({locale,category: category.slug})
 
+  console.log(categoryArticles)
+
   return <div className="flex-shrink max-w-full w-full overflow-hidden py-3 ml-6">
     <div className="w-full pb-10">
       <Link href={`/${locale}/articles/${category.slug}`}>

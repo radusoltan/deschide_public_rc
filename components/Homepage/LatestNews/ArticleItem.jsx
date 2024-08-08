@@ -26,12 +26,12 @@ export const ArticleItem = ({article}) => {
         <div className="w-2/3">
           <Link
               href={`/${locale}/articles/${category.translations.find(t => t.locale === locale).slug}/${article_id}/${slug}`}>
-            <h1 className="font-title font-bold">
+            <h1 className="font-title font-bold text-lg">
               {title}
             </h1>
           </Link>
 
-          <div className="text-gray-500 text-sm mt-7 font-text">{date}</div>
+          <div className="text-gray-500 text-sm mt-2 font-text">{date}</div>
         </div>
       </div> : <div className="w-full flex-row shadow-sm border-b-2">
         <Link

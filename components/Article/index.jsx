@@ -204,17 +204,14 @@ export const Article = ()=>{
 
                     <span className="mr-2 md:mr-4 font-text">
                       {
-                          articleData?.authors.length > 0 && <><FontAwesomeIcon
-                              icon={faUser}/> {articleData?.authors.map((author, index) => <span className="font-semibold"
-                                                                                                 key={index}>{author.full_name}, </span>)}
-                          </>
+                        articleData?.authors.length > 0 && <>
+                          <FontAwesomeIcon icon={faUser}/>
+                          {articleData?.authors.map((author, index) => <span className="font-semibold" key={index}>{author.full_name}, </span>)}
+                        </>
                       }
-
-
                       </span>
 
-                    <time className="mr-2 md:mr-4 font-text"
-                          dateTime={moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')}>
+                    <time className="mr-2 md:mr-4 font-text" dateTime={moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')}>
                       <FontAwesomeIcon icon={faCalendarDays}/> {
                       moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')
                     }
@@ -232,8 +229,7 @@ export const Article = ()=>{
 
                       <li className="inline-block">
                         <a target="_blank" className="hover:text-red-700 text-2xl" href="#" title="Share to Facebook">
-                          <FacebookShareButton className="hover:text-red-700 text-2xl"
-                                               url={process.env.NEXT_PUBLIC_API_URL + `/${locale}/articles/${category}/${article}/${slug}`}>
+                          <FacebookShareButton className="hover:text-red-700 text-2xl"  url={process.env.NEXT_PUBLIC_API_URL + `/${locale}/articles/${category}/${article}/${slug}`}>
                             <FontAwesomeIcon icon={faSquareFacebook}/>
                           </FacebookShareButton>
 
@@ -284,6 +280,7 @@ export const Article = ()=>{
                                 width={thumbnail?.width}
                                 height={thumbnail?.height}
                                 alt={articleData?.translations.find(t => t.locale === locale)?.title}
+                                className="h-auto w-full"
                             />
                             <figcaption>{mainImage?.description} | FOTO: <i>{mainImage.author}</i></figcaption>
                           </>

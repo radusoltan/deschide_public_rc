@@ -1,19 +1,20 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import {useParams, useRouter} from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import {Menu, Transition} from "@headlessui/react";
-import "flag-icons/css/flag-icons.min.css";
+// import "flag-icons/css/flag-icons.min.css";
 import {classNames} from "@/utils";
 import { Fragment } from 'react'
 
 export default function LanguageChanger() {
   const { i18n } = useTranslation();
-  const currentLocale = i18n.language;
+  // const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
+  const {category, locale: currentLocale} = useParams();
 
   const FlagIcon = ({countryCode}) => {
     if (countryCode === 'en'){

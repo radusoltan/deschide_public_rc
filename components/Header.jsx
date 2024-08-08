@@ -21,10 +21,11 @@ export const Header = ()=>{
 
   if (isLoading) return <NavSkeleton />
 
-  const navigation = categories?.data.map(({title, slug})=>({
+  const navigation = categories?.data.map(({title, slug, in_menu})=>({
     name: title.toUpperCase(),
     href: `/${locale}/articles/${slug}`,
-    current: category && category === slug
+    current: category && category === slug,
+    in_menu
   }))
 
   return <header className="mb-6">
@@ -57,7 +58,7 @@ export const Header = ()=>{
       </div>
     </div>
     <Disclosure as="nav" >
-      <div className="mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="xl:container mx-auto px-2 md:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
@@ -72,12 +73,14 @@ export const Header = ()=>{
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             {/* visible only on small screen */}
             <div className="flex flex-shrink-0 items-center sm:hidden">
-              <Image src={logo} className="h-8 w-auto" alt={process.env.NEXT_PUBLIC_SITE_NAME}/>
+              <Link href={`/${locale}`}>
+                <Image src={logo} className="h-8 w-auto" alt={process.env.NEXT_PUBLIC_SITE_NAME}/>
+              </Link>
             </div>
             {/* visible on all screen */}
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-2 flex-wrap">
-                {navigation.map((item) => (
+                {navigation.map((item) => item.in_menu && (
                   <Link
                     key={item.name}
                     href={item.href}
@@ -97,7 +100,7 @@ export const Header = ()=>{
       </div>
       <Disclosure.Panel className="sm:hidden">
         <div className="space-y-1 px-2 pb-3 pt-2">
-          {navigation.map((item) => (
+          {navigation.map((item) => item.in_menu && (
             <Disclosure.Button
               key={item.name}
               as="a"
@@ -112,6 +115,7 @@ export const Header = ()=>{
             </Disclosure.Button>
           ))}
         </div>
+        <div>SOME</div>
       </Disclosure.Panel>
     </Disclosure>
   </header>
