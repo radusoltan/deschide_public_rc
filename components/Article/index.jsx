@@ -63,8 +63,7 @@ export const Article = ()=>{
                       {
                           articleData?.authors.length > 0 && <><FontAwesomeIcon
                               icon={faUser}/> {articleData?.authors.map((author, index) => <span className="font-semibold"
-                                                                                                 key={index}>{author.full_name}, </span>)}
-                          </>
+                                                                                                 key={index}>{author.full_name}, </span>)}</>
                       }
 
 
@@ -155,6 +154,10 @@ export const Article = ()=>{
                 />
               </a>
 
+            </div>
+            <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                 role="alert">
+              Acest articol este proprietatea Deschide.md și este protejat de legea drepturilor de autor. Orice preluare a conținutului se poate face DOAR cu citarea sursei și cu LINK ACTIV către pagina acestui articol.
             </div>
 
           </div>
