@@ -1,5 +1,5 @@
 import { Open_Sans, League_Spartan } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import "./globals.css";
 import i18nConfig from "@/i18nConfig"
 import { dir } from 'i18next';
@@ -47,6 +47,7 @@ export default function RootLayout({ children, params: {locale} }) {
   return <html lang={locale} dir={dir(locale)}>
   <body className={`${logo.variable} ${title.variable}`}>
   <GoogleAnalytics gaId="G-7E5YRG7F5M" />
+  <GoogleTagManager gtmId="GTM-PGQJHFTQ" />
     <Header/>
     {children}
   <Footer />
