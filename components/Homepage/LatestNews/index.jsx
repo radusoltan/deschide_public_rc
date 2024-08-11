@@ -38,15 +38,12 @@ export const LastArticles = () => {
           </div>
         </a>
       </div>
-      {lastArticles?.articles.slice(5).map(article => <ArticleItem key={article._id}
+      {lastArticles?.articles.slice(5).map(article => !article.is_video && <ArticleItem key={article._id}
                                                                    article={article._source}/>)}
-      {/*<div className="my-6 text-center flex-shrink max-w-full w-full md:w-1/2 lg:w-full xl:w-full px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">*/}
+
         <Link href={`/${locale}/articles/all?page=1&limit=15`} ><h1 className="text-center max-w-full w-full font-light text-gray-500 p-5 hover:bg-gray-300 hover:text-gray-500 mx-auto mb-6">{
           t('moreNews')
         }</h1></Link>
-      {/*</div>*/}
-
-      {/*</div>*/}
 
     </div>
   </div>

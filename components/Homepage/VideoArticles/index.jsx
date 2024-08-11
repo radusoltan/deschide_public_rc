@@ -60,7 +60,7 @@ export const VideoArticles = () => {
                     {video._source.images.find(i => i.is_main) && (
                         <Image
                             className="rounded-lg"
-                            src={process.env.NEXT_PUBLIC_BACKEND_URL + '/' + video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).path}
+                            src={process.env.NEXT_PUBLIC_API_URL + '/' + video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).path}
                             alt={video._source.translations.find(t => t.locale === locale).title}
                             width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).width}
                             height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).height}
