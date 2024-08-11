@@ -62,8 +62,8 @@ export const VideoArticles = () => {
                             className="rounded-lg"
                             src={process.env.NEXT_PUBLIC_BACKEND_URL + '/' + video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).path}
                             alt={video._source.translations.find(t => t.locale === locale).title}
-                            width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 2).width}
-                            height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 2).height}
+                            width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).width}
+                            height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).height}
                         />
                     )}
                     <div className="absolute left-4 bottom-6 text-4xl text-red-600 opacity-85">
