@@ -29,8 +29,8 @@ export const VideoArticles = () => {
                     className="px-5 rounded relative"
                     src={process.env.NEXT_PUBLIC_API_URL + '/' + video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).path}
                     alt={video._source.translations.find(t => t.locale === locale).title}
-                    width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 2).width}
-                    height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 2).height}
+                    width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).width}
+                    height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).height}
                   />
                   <div className="absolute left-14 bottom-36 text-4xl opacity-85 text-red-600">
                     <FontAwesomeIcon icon={faYoutube}/>
