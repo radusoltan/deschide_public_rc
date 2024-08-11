@@ -9,6 +9,7 @@ import {VideoArticles} from "@/components/Homepage/VideoArticles";
 import {FeaturedArticlesList} from "@/components/Homepage/FeaturedArticlesList";
 import {SpecialArticle} from "@/components/Homepage/SpecialArticle";
 import {LiveArticle} from "@/components/Homepage/LiveArticle";
+import {HomePageTopBanner} from "@/components/AdBanners/HomePageTopBanner";
 
 const i18nNamespaces = ['homepage'];
 
@@ -22,6 +23,7 @@ export default async function Home({ params: {locale} }) {
   >
     <LiveArticle />
     <SpecialArticle />
+    {/*<HomePageTopBanner />*/}
     <FeaturedArticlesList />
     <div className="flex justify-center items-center py-6">
       <a href="http://drrm.gov.ro/w/"><Image src={gov}  alt="Departamentul pentru Relația cu Republica Moldova" /></a>

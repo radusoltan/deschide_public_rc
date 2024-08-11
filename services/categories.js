@@ -5,7 +5,7 @@ import useSWR from "swr";
 export const useCategories = ({locale}) => {
 
   const {data: categories, isLoading, error} = useSWR(`/api/categories/${locale}`,async ()=>{
-    const result = await fetch(`/${locale}/api/categories`,{ next: { revalidate: 60 }})
+    const result = await fetch(`/${locale}/api/categories`)
     return result.json()
   },{ refreshInterval: 10000 })
 
@@ -18,7 +18,7 @@ export const useCategories = ({locale}) => {
 export const useHomePageCategoryArticles = ({locale, category}) => {
 
   const {data: categoryArticles} = useSWR(`/api/categoryArticles/${category}`,async ()=>{
-    const response = await fetch(`/${locale}/articles/${category}/api/homePageArticles`,{ next: { revalidate: 60 }})
+    const response = await fetch(`/${locale}/articles/${category}/api/homePageArticles`)
     return response.json()
   },{ refreshInterval: 10000 })
 

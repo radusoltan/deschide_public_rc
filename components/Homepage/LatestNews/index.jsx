@@ -25,7 +25,7 @@ export const LastArticles = () => {
     <div className="w-full bg-white sticky top-1">
 
       {/*<div className="flex flex-row flex-wrap ">*/}
-      {lastArticles?.articles.slice(0, 5).map(article => <ArticleItem key={article._id}
+      {lastArticles?.articles.slice(0, 5).map(article => !article.is_video && <ArticleItem key={article._id}
                                                                       article={article._source}/>)}
       <div
           className="flex-shrink max-w-full w-full md:w-1/2 lg:w-full xl:w-full px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
