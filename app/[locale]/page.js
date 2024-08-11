@@ -38,7 +38,8 @@ export default async function Home({ params: {locale} }) {
         </div>
       </div>
     </div>
-    <SlideNews />
     <VideoArticles />
+    <SlideNews />
+
   </TranslationsProvider>
 }

@@ -57,11 +57,11 @@ export const SlideNews = ()=>{
 
                   return <SplideSlide key={index}>
                     <div className="flex-shrink">
-                      {
-                          authors.length > 0 && <h3 className="text-sm font-text mb-5 text-blue-700">
-                            {authors[0].full_name}
-                          </h3>
-                      }
+                      {/*{*/}
+                      {/*    authors.length > 0 && <h3 className="text-sm font-text mb-5 text-blue-700">*/}
+                      {/*      {authors[0].full_name}*/}
+                      {/*    </h3>*/}
+                      {/*}*/}
                       <Link
                           href={`/${locale}/articles/${category.translations.find(t => t.locale === locale).slug}/${article_id}/${slug}`}>
                         <h1 className="text-lg font-bold leading-tight mb-5 font-title">{
