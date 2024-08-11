@@ -25,7 +25,8 @@ export const GET = async (request, {params: {locale}})=>{
       bool: {
         must: [
           { match: { "translations.locale": locale } },
-          { match: { "translations.status": "P" } }
+          { match: { "translations.status": "P" } },
+          { match: { "translations.is_video": false } }
         ]
       }
     },
