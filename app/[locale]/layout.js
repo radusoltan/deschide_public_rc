@@ -46,12 +46,12 @@ export function generateStaticParams() {
 
 export default function RootLayout({ children, params: {locale} }) {
   return <html lang={locale} dir={dir(locale)}>
-  <Script
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4088962893903575`}
-      crossOrigin="anonymous"
-      strategy="afterInteractive"
-  />
+  {/*<Script*/}
+  {/*    async*/}
+  {/*    src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4088962893903575`}*/}
+  {/*    crossOrigin="anonymous"*/}
+  {/*    strategy="afterInteractive"*/}
+  {/*/>*/}
 
   <body className={`${logo.variable} ${title.variable}`}>
   <GoogleAnalytics gaId="G-7E5YRG7F5M"/>

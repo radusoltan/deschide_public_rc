@@ -33,7 +33,7 @@ export const Article = ()=>{
   return articleData?.is_video ? <>
 
     {/* advertisement */}
-    <div className="bg-gray-50 py-4">
+    <div className="bg-gray-50 py-4 hidden">
       <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div className="mx-auto table text-center text-sm">
           <a className="uppercase" href="#">Advertisement</a>
@@ -161,7 +161,7 @@ export const Article = ()=>{
             </div>
 
           </div>
-          <div className="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-last lg:order-last">
+          <div className="hidden flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-last lg:order-last">
             <div className="text-sm py-6 sticky">
               <div className="w-full text-center">
                 <a className="uppercase" href="#">Advertisement</a>
@@ -177,7 +177,7 @@ export const Article = ()=>{
   </> : <>
 
     {/* advertisement */}
-    <div className="bg-gray-50 py-4">
+    <div className="hidden bg-gray-50 py-4">
       <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
         <div className="mx-auto table text-center text-sm">
           <a className="uppercase" href="#">Advertisement</a>
@@ -341,7 +341,7 @@ export const Article = ()=>{
               </div>
 
             </div>
-            <div className="text-sm py-6 sticky">
+            <div className="hidden text-sm py-6 sticky">
               <div className="w-full text-center">
                 <a className="uppercase" href="#">Advertisement</a>
                 <a href="#">
