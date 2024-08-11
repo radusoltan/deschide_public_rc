@@ -59,7 +59,7 @@ export const ArticleItem = ({article, locale}) => {
         <Link
             href={`/${locale}/articles/${category.translations.find(t => t.locale === locale).slug}/${article_id}/${translations?.find(t => t.locale === locale)?.slug}`}>
           {publishedAt.isAfter(oneHourAgo) && <span className="bg-red-600 text-white p-1 text-sm rounded-md">nou</span>}
-          <h2 className="font-title text-lg font-bold capitalize leading-tight text-white mt-2 mb-1">{
+          <h2 className="font-title text-lg font-bold leading-tight text-white mt-2 mb-1">{
             article._source.translations.find(t => t.locale === locale)?.title
           }</h2>
         </Link>

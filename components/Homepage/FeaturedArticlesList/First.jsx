@@ -39,7 +39,7 @@ export const First = ({article})=>{
         <Link
             href={`/${locale}/articles/${category?.translations.find(t => t.locale === locale).slug}/${article_id}/${translations?.find(t => t.locale === locale)?.slug}`}>
           {publishedAt.isAfter(oneHourAgo) && <span className="bg-red-600 text-white p-1">NEW</span>}
-          <h2 className="text-3xl font-bold capitalize text-gray-700 mb-3 font-new">
+          <h2 className="text-3xl font-bold text-gray-700 mb-3 font-new">
             {title}
           </h2>
         </Link>
