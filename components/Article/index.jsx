@@ -207,14 +207,16 @@ export const Article = ()=>{
 
                     <span className="mr-2 md:mr-4 font-text">
                       {
-                        articleData?.authors.length > 0 && <>
-                          <FontAwesomeIcon icon={faUser}/>
-                          {articleData?.authors.map((author, index) => <span className="font-semibold" key={index}>{author.full_name}, </span>)}
-                        </>
+                          articleData?.authors.length > 0 && <>
+                            <FontAwesomeIcon icon={faUser}/>
+                            {articleData?.authors.map((author, index) => <span className="font-semibold"
+                                                                               key={index}>{author.full_name}, </span>)}
+                          </>
                       }
                       </span>
 
-                    <time className="mr-2 md:mr-4 font-text" dateTime={moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')}>
+                    <time className="mr-2 md:mr-4 font-text"
+                          dateTime={moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')}>
                       <FontAwesomeIcon icon={faCalendarDays}/> {
                       moment(articleData?.translations.find(t => t.locale === locale)?.published_at).format('DD-MM-YYYY')
                     }
@@ -232,7 +234,8 @@ export const Article = ()=>{
 
                       <li className="inline-block">
                         <a target="_blank" className="hover:text-red-700 text-2xl" href="#" title="Share to Facebook">
-                          <FacebookShareButton className="hover:text-red-700 text-2xl"  url={process.env.NEXT_PUBLIC_API_URL + `/${locale}/articles/${category}/${article}/${slug}`}>
+                          <FacebookShareButton className="hover:text-red-700 text-2xl"
+                                               url={process.env.NEXT_PUBLIC_API_URL + `/${locale}/articles/${category}/${article}/${slug}`}>
                             <FontAwesomeIcon icon={faSquareFacebook}/>
                           </FacebookShareButton>
 
@@ -310,6 +313,11 @@ export const Article = ()=>{
               </a>
 
             </div>
+            <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                 role="alert">
+              Acest articol este proprietatea Deschide.md și este protejat de legea drepturilor de autor. Orice preluare
+              a conținutului se poate face DOAR cu citarea sursei și cu LINK ACTIV către pagina acestui articol.
+            </div>
           </div>
           {/* Right */}
           <div className="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-last lg:order-last">
@@ -317,7 +325,7 @@ export const Article = ()=>{
               <div className="mb-6">
                 <div className="w-full py-3">
                   <h2 className="text-gray-800 text-lg font-bold font-category">
-                    <span className="inline-block h-4 border-l-4 border-red-600 mr-2"></span>
+                  <span className="inline-block h-4 border-l-4 border-red-600 mr-2"></span>
                     {t('popular')}
                   </h2></div>
                 <ul className="post-number">
