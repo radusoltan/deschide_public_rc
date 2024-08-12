@@ -32,13 +32,13 @@ export const VideoArticles = () => {
                         width={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).width}
                         height={video._source.images.find(i => i.is_main)?.thumbnails.find(th => th.rendition_id === 1).height}
                     />
-                    <div className="absolute left-14 bottom-36 text-4xl opacity-85 text-red-600">
-                      <FontAwesomeIcon icon={faYoutube}/>
-                    </div>
+                    {/*<div className="absolute left-14 bottom-36 text-4xl opacity-85 text-red-600">*/}
+                    {/*  <FontAwesomeIcon icon={faYoutube}/>*/}
+                    {/*</div>*/}
                     <div className="font-title text-xl mt-5 px-5 font-bold">
                       {video._source.translations.find(t => t.locale === locale).title}
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: video._source.translations.find(t => t.locale === locale).lead }} />
+                    <div className="mt-5 px-5 font-text" dangerouslySetInnerHTML={{ __html: video._source.translations.find(t => t.locale === locale).lead }} />
                     <div className="text-gray-500 px-5 text-sm mt-5 font-text">
                       {moment(video._source.translations.find(t => t.locale === locale)?.published_at).format('LL')}, <span
                         className="font-light text-md">views: {video._source.visits}</span>
