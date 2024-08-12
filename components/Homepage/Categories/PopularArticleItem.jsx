@@ -42,7 +42,7 @@ export const PopularArticleItem = ({article}) => {
           <Link href={`/${locale}/articles/${category.translations.find(t=>t.locale===locale).slug}/${article_id}/${translated?.slug}`}>{translated?.title}</Link>
         </h3>
         <div className="text-gray-500 text-sm mt-2 font-text">
-          {date}, <span className="font-light">views: {visits}</span>
+          {date}{/*, <span className="font-light">views: {visits}</span>*/}
         </div>
       </div>
     </div>

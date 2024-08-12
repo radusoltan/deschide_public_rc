@@ -76,10 +76,10 @@ export const Article = ()=>{
                     }
                     </time>
                     {/*view*/}
-                    <span className="mr-2 md:mr-4 font-text">
+                    {/*<span className="mr-2 md:mr-4 font-text">*/}
 
-                      <FontAwesomeIcon icon={faEye}/> {articleData?.visits} x view
-                      </span>
+                    {/*  <FontAwesomeIcon icon={faEye}/> {articleData?.visits} x view*/}
+                    {/*  </span>*/}
 
                   </div>
 
@@ -220,10 +220,10 @@ export const Article = ()=>{
                     }
                     </time>
                     {/*view*/}
-                    <span className="mr-2 md:mr-4 font-text">
+                    {/*<span className="mr-2 md:mr-4 font-text">*/}
 
-                      <FontAwesomeIcon icon={faEye}/> {articleData?.visits} x view
-                      </span>
+                    {/*  <FontAwesomeIcon icon={faEye}/> {articleData?.visits} x view*/}
+                    {/*  </span>*/}
 
                   </div>
 
@@ -334,7 +334,7 @@ export const Article = ()=>{
                     <div className="text-gray-500 text-sm lg:ml-16 ml-20 font-text">
                       {
                         moment(article?.translations.find(t => t.locale === locale)?.published_at).format("MM Do YYYY, h:mm")
-                      }, <span className="font-light">views: {article?.visits}</span>
+                      }{/*, <span className="font-light">views: {article?.visits}</span>*/}
                     </div>
                   </li>)}
                 </ul>
