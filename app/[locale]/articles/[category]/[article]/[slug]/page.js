@@ -21,9 +21,9 @@ export const generateMetadata = async ({params: {locale, article, category}})=>{
       type: 'article',
       publishedTime: published_at,
       authors: authors,
-      url: process.env.NEXT_PUBLIC_APP_URL+`/${locale}/articles/${category}/${article}/${slug}`,
+      url: process.env.NEXT_PUBLIC_SITE_URL+`/${locale}/articles/${category}/${article}/${slug}`,
       siteName: 'Deschide.MD',
-      images: thumbnail && [`${process.env.NEXT_PUBLIC_BACKEND_URL + '/' + thumbnail?.path}`],
+      images: thumbnail && [`${process.env.NEXT_PUBLIC_API_URL + thumbnail?.path}`],
     },
     other: {
       ["fb:app_id"]: process.env.FB_APP_ID,
