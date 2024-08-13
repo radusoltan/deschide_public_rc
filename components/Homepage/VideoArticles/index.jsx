@@ -40,8 +40,7 @@ export const VideoArticles = () => {
                     </div>
                     <div className="mt-5 px-5 font-text" dangerouslySetInnerHTML={{ __html: video._source.translations.find(t => t.locale === locale).lead }} />
                     <div className="text-gray-500 px-5 text-sm mt-5 font-text">
-                      {moment(video._source.translations.find(t => t.locale === locale)?.published_at).format('LL')}, <span
-                        className="font-light text-md">views: {video._source.visits}</span>
+                      {moment(video._source.translations.find(t => t.locale === locale)?.published_at).format('LL')}{/*, <span className="font-light text-md">views: {video._source.visits}</span>*/}
                     </div>
                   </Link>
                 </div>
@@ -79,7 +78,7 @@ export const VideoArticles = () => {
                       </Link>
                     </h3>
                     <div className="text-gray-500 text-sm mt-7 font-text">
-                      1/12/2024, <span className="font-light">views: 1000</span>
+                      {moment(video._source.translations.find(t => t.locale === locale)?.published_at).format('LL')}{/*, <span className="font-light">views: 1000</span>*/}
                     </div>
                   </div>
                 </div>
