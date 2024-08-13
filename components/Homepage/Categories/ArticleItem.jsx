@@ -15,7 +15,7 @@ export const ArticleItem = ({article}) => {
 
   const date = moment(translated?.published_at).format("LL")
 
-  return article && <div className="pb-5">
+  return article && !article?.is_video && <div className="pb-5">
     <Link
         href={`/${locale}/articles/${category.translations.find(t => t.locale === locale).slug}/${article_id}/${translated?.slug}`}>
       <h1 className="font-title font-bold text-lg">

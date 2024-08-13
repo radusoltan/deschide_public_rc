@@ -123,7 +123,7 @@ export default async function Page({ params: {locale, category}, searchParams })
 
             </div>
           </div>
-          <div className="text-sm py-6 sticky top-0">
+          <div className="hidden text-sm py-6 sticky top-0">
             <div className="w-full text-center">
               <a className="uppercase" href="#">Advertisement</a>
               <a href="#">
