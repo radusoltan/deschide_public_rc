@@ -23,7 +23,7 @@ export const generateMetadata = async ({params: {locale, article, category}})=>{
       authors: authors,
       url: process.env.NEXT_PUBLIC_SITE_URL+`/${locale}/articles/${category}/${article}/${slug}`,
       siteName: 'Deschide.MD',
-      images: thumbnail && [`${process.env.NEXT_PUBLIC_API_URL + thumbnail?.path}`],
+      images: thumbnail && [`${process.env.NEXT_PUBLIC_API_URL + '/' + thumbnail?.path}`],
     },
     other: {
       ["fb:app_id"]: process.env.FB_APP_ID,
